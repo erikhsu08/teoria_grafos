@@ -1,5 +1,6 @@
 package GrafoMatriz;
 
+import java.util.*;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
@@ -162,5 +163,122 @@ public class TGrafo {
 		// Reduzir o tamanho da matriz
 		n--;
 	}
+	
+	//exercicio 10
+	public boolean isCompletoNDirecional() {
+        int n = adj.length;
 
+        for (int i = 0; i < n; i++) {
+            for (int j = i + 1; j < n; j++) {
+                if (adj[i][j] == 0) {
+                    return false;
+                }
+            }
+        }
+
+        return true;
+    }
+	
+	//exercicio 11
+	public boolean isCompletoDirecional() {
+        int n = adj.length;
+
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < n; j++) {
+                if (i != j && adj[i][j] == 0) {
+                    return false;
+                }
+            }
+        }
+
+        return true;
+    }
+	
+	//exercicio 12
+	public int[][] complementoGrafo() {
+        int n = adj.length;
+        int[][] complemento = new int[n][n];
+
+        for (int i = 0; i < n; i++) {
+            for (int j = i; j < n; j++) {
+                complemento[i][j] = complemento[j][i] = 1 - adj[i][j];
+            }
+        }
+
+        return complemento;
+    }
+	
+	//exercicio 13
+	public boolean isConexo() {
+        int n = adj.length;
+        boolean[] visitados = new boolean[n];
+        
+        Stack<Integer> pilha = new Stack<>();
+        pilha.push(0);
+        
+        while (!pilha.isEmpty()) {
+            int v = pilha.pop();
+            visitados[v] = true;
+            
+            for (int i = 0; i < n; i++) {
+                if (adj[v][i] == 1 && !visitados[i]) {
+                    pilha.push(i);
+                }
+            }
+        }
+        
+        for (boolean visitado : visitados) {
+            if (!visitado) {
+                return false;
+            }
+        }
+        
+        return true;
+    }
+	
+	//exercicio 14
+	public int categoriaConexidade() {
+        int n = adj.length;
+        boolean[] visitados = new boolean[n];
+
+        // Função auxiliar para realizar uma busca em profundidade
+        void dfs(int s) {
+            visitados[s] = true;
+            for (int i = 0; i < n; i++) {
+                if (matrizAdjacencia[s][i] == 1 && !visitados[i]) {
+                    dfs(i);
+                }
+            }
+        }
+
+        // 1ª DFS para verificar se o grafo é fortemente conexo
+        dfs(0); // Começa a busca a partir de um vértice qualquer
+        for (boolean visitado : visitados) {
+            if (!visitado) {
+                return 0; // Não é fortemente conexo
+            }
+        }
+
+        // Transpor a matriz de adjacência para verificar se o grafo transposto é fortemente conexo
+        int[][] transposta = new int[n][n];
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < n; j++) {
+                transposta[i][j] = matrizAdjacencia[j][i];
+            }
+        }
+
+        // Reiniciar os visitados
+        Arrays.fill(visitados, false);
+        dfs(0); // Começa a busca a partir do mesmo vértice inicial no grafo transposto
+
+        for (boolean visitado : visitados) {
+            if (!visitado) {
+                return 2; // É semi-fortemente conexo
+            }
+        }
+
+        // Se chegou aqui, o grafo é fortemente conexo
+        return 3;
+    }
+	
 }
