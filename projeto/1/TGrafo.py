@@ -33,6 +33,14 @@ class TGrafo:
             if v.nome == nome:
                 return v
 
+    def node_existe(self, node) -> bool:
+        v = None
+        for i in range(len(self.nodes)):
+            v = self.nodes[i]
+            if v.nome == node:
+                return True
+        return False
+    
     def lerArquivo(self, file):
         try:
             with open(file, "r") as f:
