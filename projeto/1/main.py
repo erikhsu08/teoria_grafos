@@ -1,4 +1,28 @@
+"""
+NOME: Erik Samuel Viana Hsu
+RA: 10403109
+NOME: Mateus Kenzo Iochimoto
+RA: 10400995
+NOME: Thiago Shihan Cardoso Toma
+RA: 10400764
+"""
+
 from TGrafo import TGrafo
+
+"""
+todo
+O menu do projeto de grafos: 3) o desenvolvimento de uma aplicação contendo um menu de opções que permita
+a) Ler dados do arquivo grafo.txt; (👍)
+b) Gravar dados no arquivo grafo.txt; 
+c) Inserir vértice; (👍)
+d) Inserir aresta; (👍)
+e) Remove vértice; (👍)
+f) Remove aresta; (👍)
+g) Mostrar conteúdo do arquivo; (👍)
+h) Mostrar grafo; (👍)
+i) Apresentar a conexidade do grafo e o reduzido;
+j) Encerrar a aplicação. (👍)
+"""
 
 def printMenu():
     print("\nSelecione uma opção para prosseguir: ")
@@ -27,6 +51,10 @@ def main():
 
         elif (opcao == "c"):
             continue
+
+        elif (opcao == "j"):
+            print("\nPrograma encerrado")
+            break
 """def main():
     while True:
         printMenu()
