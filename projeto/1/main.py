@@ -16,9 +16,9 @@ a) Ler dados do arquivo grafo.txt; (👍)
 b) Gravar dados no arquivo grafo.txt; 
 c) Inserir vértice; (👍)
 d) Inserir aresta; (👍)
-e) Remove vértice; (👍)
-f) Remove aresta; (👍)
-g) Mostrar conteúdo do arquivo; (👍)
+e) Remove vértice; 
+f) Remove aresta; 
+g) Mostrar conteúdo do arquivo; 
 h) Mostrar grafo; (👍)
 i) Apresentar a conexidade do grafo e o reduzido;
 j) Encerrar a aplicação. (👍)
@@ -44,13 +44,53 @@ def main():
         if (opcao == "a"):
             grafo = TGrafo()
             grafo.lerArquivo("grafo.txt")
-            grafo.show()
         
         elif (opcao == "b"): #todo
             continue
 
         elif (opcao == "c"):
+            v = input("Digite o vértice a ser criado: ")
+            try:
+                grafo.add_node(v)
+            except UnboundLocalError:
+                print("O grafo ainda não foi criado")
+
+        elif (opcao == "d"):
+            v1 = input("A aresta sai de qual vértice... ")
+            v2 = input("a aresta termina em qual vértice? ")
+            try:
+                if(grafo.node_existe(v1) and grafo.node_existe(v2)):
+                    grafo.get_node(v1).insereAresta(v2)
+                else:
+                    print("Algum vértice selecionado não existe")
+            except UnboundLocalError:
+                print("O grafo ainda não foi criado")
             continue
+
+        elif (opcao == "e"):
+            v = input("Digite o vértice a ser removido: ")
+            try:
+                if(grafo.node_existe(v)):
+                    grafo.nodes.remove(grafo.get_node(v))
+                else:
+                    print("O vértice não existe")
+            except UnboundLocalError:
+                print("O grafo ainda não foi criado")
+
+        elif (opcao == "f"):
+            pass
+
+        elif (opcao == "g"):
+            pass
+
+        elif (opcao == "h"):
+            try:
+                grafo.show()
+            except UnboundLocalError:
+                print("O grafo ainda não foi criado")
+        
+        elif (opcao == "i"): #todo
+            pass
 
         elif (opcao == "j"):
             print("\nPrograma encerrado")
