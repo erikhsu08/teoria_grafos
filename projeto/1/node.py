@@ -11,7 +11,9 @@ class Node:
     
     def __init__(self, nome) -> None:
         self.nome = nome
+        self.n_aresta = 0
         self.arestas = []
     
     def insereAresta(self, aresta):
         self.arestas.append(aresta)
+        self.n_aresta += 1
