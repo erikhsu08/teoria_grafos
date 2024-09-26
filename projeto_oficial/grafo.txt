@@ -1,0 +1,228 @@
+0
+75
+0 "Pedro"
+1 "João"
+2 "Maria"
+3 "Lucas"
+4 "Mario"
+5 "Luis"
+6 "Lais"
+7 "Sarah"
+8 "Renata"
+9 "Jonas"
+10 "Fernanda"
+11 "Carlos"
+12 "Ana"
+13 "Bruno"
+14 "Daniel"
+15 "Clara"
+16 "Gabriel"
+17 "Letícia"
+18 "Rodrigo"
+19 "Paula"
+20 "Tiago"
+21 "Rafaela"
+22 "Ricardo"
+23 "Isabela"
+24 "Felipe"
+25 "Blinding Lights – The Weeknd"
+26 "Levitating – Dua Lipa"
+27 "Bad Guy – Billie Eilish"
+28 "Shape of You – Ed Sheeran"
+29 "Watermelon Sugar – Harry Styles"
+30 "Havana – Camila Cabello"
+31 "Thank U, Next – Ariana Grande"
+32 "Roar – Katy Perry"
+33 "Sorry – Justin Bieber"
+34 "Shallow – Lady Gaga & Bradley Cooper"
+35 "Don’t Start Now – Dua Lipa"
+36 "Shake It Off – Taylor Swift"
+37 "Uptown Funk – Mark Ronson ft. Bruno Mars"
+38 "Senorita – Shawn Mendes & Camila Cabello"
+39 "Blame It on the Boogie – Jackson 5"
+40 "Bohemian Rhapsody – Queen"
+41 "Stairway to Heaven – Led Zeppelin"
+42 "Hotel California – Eagles"
+43 "Sweet Child O’ Mine – Guns N’ Roses"
+44 "Back In Black – AC/DC"
+45 "Smells Like Teen Spirit – Nirvana"
+46 "Imagine – John Lennon"
+47 "Paint It Black – The Rolling Stones"
+48 "Under the Bridge – Red Hot Chili Peppers"
+49 "Highway to Hell – AC/DC"
+50 "Enter Sandman – Metallica"
+51 "Born to Run – Bruce Springsteen"
+52 "Don’t Stop Believin’ – Journey"
+53 "Another One Bites the Dust – Queen"
+54 "Living on a Prayer – Bon Jovi"
+55 "Sicko Mode – Travis Scott"
+56 "God’s Plan – Drake"
+57 "Old Town Road – Lil Nas X"
+58 "Lose Yourself – Eminem"
+59 "HUMBLE. – Kendrick Lama"
+60 "Suge – DaBaby"
+61 "Hotline Bling – Drake"
+62 "In Da Club – 50 Cent"
+63 "N.Y. State of Mind – Nas"
+64 "Alright – Kendrick Lamar"
+65 "Juicy – The Notorious B.I.G."
+66 "Run This Town – Jay-Z, Rihanna, Kanye West"
+67 "Good Form – Nicki Minaj"
+68 "The Gambler – Kenny Rogers"
+69 "Jolene – Dolly Parton"
+70 "Ring of Fire – Johnny Cash"
+71 "Tennessee Whiskey – Chris Stapleton"
+72 "Take Me Home, Country Roads – John Denver"
+73 "Dance Monkey – Tones and I"
+74 "Stay – The Kid LAROI & Justin Bieber"
+150
+0 25
+0 26
+0 27
+0 28
+0 29
+0 30
+1 31
+1 32
+1 33
+1 34
+1 35
+1 36
+2 37
+2 38
+2 39
+2 40
+2 41
+2 42
+3 43
+3 44
+3 45
+3 46
+3 47
+3 48
+4 49
+4 50
+4 51
+4 52
+4 53
+4 54
+5 55
+5 56
+5 57
+5 58
+5 59
+5 60
+6 61
+6 62
+6 63
+6 64
+6 65
+6 66
+7 67
+7 68
+7 69
+7 70
+7 71
+7 72
+8 73
+8 74
+8 25
+8 26
+8 27
+8 28
+9 29
+9 30
+9 31
+9 32
+9 33
+9 34
+10 35
+10 36
+10 37
+10 38
+10 39
+10 40
+11 41
+11 42
+11 43
+11 44
+11 45
+11 46
+12 47
+12 48
+12 49
+12 50
+12 51
+12 52
+13 53
+13 54
+13 55
+13 56
+13 57
+13 58
+14 59
+14 60
+14 61
+14 62
+14 63
+14 64
+15 65
+15 66
+15 67
+15 68
+15 69
+15 70
+16 71
+16 72
+16 73
+16 74
+16 25
+16 26
+17 27
+17 28
+17 29
+17 30
+17 31
+17 32
+18 33
+18 34
+18 35
+18 36
+18 37
+18 38
+19 39
+19 40
+19 41
+19 42
+19 43
+19 44
+20 45
+20 46
+20 47
+20 48
+20 49
+20 50
+21 51
+21 52
+21 53
+21 54
+21 55
+21 56
+22 57
+22 58
+22 59
+22 60
+22 61
+22 62
+23 63
+23 64
+23 65
+23 66
+23 67
+23 68
+24 69
+24 70
+24 71
+24 72
+24 73
+24 74
