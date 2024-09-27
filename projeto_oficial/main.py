@@ -49,8 +49,7 @@ def gravar_grafo(grafo, arquivo):
     with open(arquivo, 'w') as f:
         f.write(f"0\n")  # Tipo do grafo (0 para não orientado)
         f.write(f"{grafo.V}\n")  # Número de vértices
-        # Se precisar salvar pesos ou rótulos dos vértices, adicione aqui
-
+        
         # Grava arestas
         arestas = sum(len(adj) for adj in grafo.adj)
         f.write(f"{arestas}\n")  # Número de arestas
