@@ -84,10 +84,10 @@ def menu():
         elif opcao == "c":
             if grafo is not None: 
                 v = input("\nDigite o nome da música a ser inserida: ")
-                grafo.V += 1
                 grafo.adj.append([])  # Adiciona nova lista de adjacência
                 grafo.musicas[grafo.V] = v
                 print(f"Vértice {grafo.V} inserido.")
+                grafo.V += 1
             else:
                 print("Grafo não carregado.")
         elif opcao == "d":
@@ -123,7 +123,7 @@ def menu():
         
         elif opcao == "g":
             pass
-        
+
         elif opcao == "h":
             if grafo:
                 grafo.show()
