@@ -38,6 +38,12 @@ def carregar_grafo(arquivo):
     
     return grafo
 
+def mostra_arquivo(arquivo):
+    with open(arquivo, 'r', encoding='utf-8') as f:
+        tudo = f.readlines()
+        for linha in tudo:
+            print(linha.strip())
+    f.close()
 
 def gravar_grafo(grafo, arquivo):
     with open(arquivo, 'w') as f:
@@ -66,8 +72,7 @@ def menu():
         print("f. Remover aresta")
         print("g. Mostrar conteúdo do arquivo")
         print("h. Mostrar grafo")
-        print("i. Apresentar a conexidade do grafo")
-        print("j. Sair")
+        print("i. Sair")
 
         opcao = input("\nEscolha uma opção: ")
         if opcao == "a":
@@ -105,8 +110,10 @@ def menu():
             if grafo:
                 v = int(input("Digite o vértice a ser removido: "))
                 if 0 <= v < grafo.V:
+                    grafo.musicas.pop(v)
+                    grafo.adj.pop(v)
                     grafo.V -= 1
-                    grafo.adj.pop(v)  # Remove o vértice
+                      # Remove o vértice
                     print(f"Vértice {v} removido.")
                 else:
                     print("Vértice inválido.")
@@ -122,21 +129,16 @@ def menu():
                 print("Grafo não carregado.")
         
         elif opcao == "g":
-            pass
+            arquivo = input("Digite o nome do arquivo: ")
+            grafo = mostra_arquivo(arquivo)
 
         elif opcao == "h":
             if grafo:
                 grafo.show()
             else:
                 print("Grafo não carregado.")
+
         elif opcao == "i":
-            if grafo:
-                # Para simplicidade, apresentamos apenas que o grafo é conectado ou não
-                # Aqui, você pode implementar um algoritmo para verificar a conectividade
-                print("Conexidade do grafo não implementada ainda.")
-            else:
-                print("Grafo não carregado.")
-        elif opcao == "j":
             break
         else:
             print("Opção inválida.")
