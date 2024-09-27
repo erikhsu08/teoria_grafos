@@ -58,30 +58,30 @@ def menu():
     grafo = None
     while True:
         print("\nMenu de opções: ")
-        print("1. Ler dados do arquivo")
-        print("2. Gravar dados no arquivo")
-        print("3. Inserir vértice")
-        print("4. Inserir aresta")
-        print("5. Remover vértice")
-        print("6. Remover aresta")
-        print("7. Mostrar conteúdo do arquivo")
-        print("8. Mostrar grafo")
-        print("9. Apresentar a conexidade do grafo")
-        print("10. Sair")
+        print("a. Ler dados do arquivo")
+        print("b. Gravar dados no arquivo")
+        print("c. Inserir vértice")
+        print("d. Inserir aresta")
+        print("e. Remover vértice")
+        print("f. Remover aresta")
+        print("g. Mostrar conteúdo do arquivo")
+        print("h. Mostrar grafo")
+        print("i. Apresentar a conexidade do grafo")
+        print("j. Sair")
 
         opcao = input("\nEscolha uma opção: ")
-        if opcao == "1":
+        if opcao == "a":
             arquivo = input("Digite o nome do arquivo: ")
             grafo = carregar_grafo(arquivo)
             print("Grafo criado!")
-        elif opcao == "2":
+        elif opcao == "b":
             if grafo:
                 arquivo = input("\nDigite o nome do arquivo para gravar: ")
                 gravar_grafo(grafo, arquivo)
                 print(f"Grafo gravado em {arquivo}.")
             else:
                 print("Grafo não carregado.")
-        elif opcao == "3":
+        elif opcao == "c":
             if grafo is not None: 
                 v = input("\nDigite o nome da música a ser inserida: ")
                 grafo.V += 1
@@ -90,7 +90,7 @@ def menu():
                 print(f"Vértice {grafo.V} inserido.")
             else:
                 print("Grafo não carregado.")
-        elif opcao == "4":
+        elif opcao == "d":
             if grafo:
                 v = int(input("\nDigite o vértice de origem: "))
                 w = int(input("Digite o vértice de destino: "))
@@ -101,7 +101,7 @@ def menu():
                     print("Vértice(s) inválido(s).")
             else:
                 print("Grafo não carregado.")
-        elif opcao == "5":
+        elif opcao == "e":
             if grafo:
                 v = int(input("Digite o vértice a ser removido: "))
                 if 0 <= v < grafo.V:
@@ -112,7 +112,7 @@ def menu():
                     print("Vértice inválido.")
             else:
                 print("Grafo não carregado.")
-        elif opcao == "6":
+        elif opcao == "f":
             if grafo:
                 v = int(input("Digite o vértice de origem: "))
                 w = int(input("Digite o vértice de destino: "))
@@ -120,19 +120,23 @@ def menu():
                 print(f"Aresta {v} -> {w} removida.")
             else:
                 print("Grafo não carregado.")
-        elif opcao == "8":
+        
+        elif opcao == "g":
+            pass
+        
+        elif opcao == "h":
             if grafo:
                 grafo.show()
             else:
                 print("Grafo não carregado.")
-        elif opcao == "9":
+        elif opcao == "i":
             if grafo:
                 # Para simplicidade, apresentamos apenas que o grafo é conectado ou não
                 # Aqui, você pode implementar um algoritmo para verificar a conectividade
                 print("Conexidade do grafo não implementada ainda.")
             else:
                 print("Grafo não carregado.")
-        elif opcao == "10":
+        elif opcao == "j":
             break
         else:
             print("Opção inválida.")
